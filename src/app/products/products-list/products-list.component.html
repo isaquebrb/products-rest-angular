@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Products List</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">Url Imagem</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of Products">
+                <th scope="row">{{product.id}}</th>
+                <td>{{product.name}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.imgUrl}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

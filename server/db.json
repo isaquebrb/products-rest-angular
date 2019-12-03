@@ -1,0 +1,19 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Tony Stark",
+        "description": "Tony Stark é o cara",
+        "price": 1200.0,
+        "imgUrl": "www.google.com.br/imagem.jpg"
+      },
+      {
+          "id": 2,
+          "name": "Tony Stark",
+          "description": "Tony Stark é o cara",
+          "price": 1200.0,
+          "imgUrl": "www.google.com.br/imagem.jpg"
+        }
+    ]
+  }
+  
