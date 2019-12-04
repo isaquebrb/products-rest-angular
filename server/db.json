@@ -1,19 +1,55 @@
 {
-    "products": [
-      {
-        "id": 1,
-        "name": "Tony Stark",
-        "description": "Tony Stark é o cara",
-        "price": 1200.0,
-        "imgUrl": "www.google.com.br/imagem.jpg"
-      },
-      {
-          "id": 2,
-          "name": "Tony Stark",
-          "description": "Tony Stark é o cara",
-          "price": 1200.0,
-          "imgUrl": "www.google.com.br/imagem.jpg"
-        }
-    ]
-  }
-  
+  "products": [
+    {
+      "id": 1,
+      "name": "MacBook Pro",
+      "description": "In mattis facilisis dolor, at sodales leo pulvinar eu.",
+      "price": 1250.0,
+      "imgUrl": "https://www.google.com/search?q=macbook+pro"
+    },
+    {
+      "id": 2,
+      "name": "PC Gamer",
+      "description": "Duis malesuada, mi sit amet sagittis ornare.",
+      "price": 1200.0,
+      "imgUrl": "https://www.google.com/search?q=pc+gamer"
+    },
+    {
+      "id": 3,
+      "name": "Rails for Dummies",
+      "description": "Nullam sit amet condimentum lectus, id sagittis augue.",
+      "price": 100.99,
+      "imgUrl": "https://www.google.com/search?q=rails+for+dummies"
+    },
+    {
+      "id": 4,
+      "name": "Smart TV",
+      "description": "Donec eleifend at lacus ut sagittis.",
+      "price": 2190.0,
+      "imgUrl": "https://www.google.com/search?q=smart+tv"
+    },
+    {
+      "id": 5,
+      "name": "The Lord of the Rings",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "price": 90.5,
+      "imgUrl": "https://www.google.com/search?q=the+lord+of+the+rings"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Maria Brown",
+      "email": "maria@gmail.com",
+      "phone": "988888888",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "name": "Alex Green",
+      "email": "alex@gmail.com",
+      "phone": "977777777",
+      "password": "123456"
+    }
+  ]
+}

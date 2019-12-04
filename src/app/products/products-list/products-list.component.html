@@ -1,23 +1,83 @@
-<div class="container">
-    <h1>Products List</h1>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Description</th>
-                <th scope="col">Price</th>
-                <th scope="col">Url Imagem</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let product of Products">
-                <th scope="row">{{product.id}}</th>
-                <td>{{product.name}}</td>
-                <td>{{product.description}}</td>
-                <td>{{product.price}}</td>
-                <td>{{product.imgUrl}}</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="text-center">
+  <h1 class="mt-2 mb-4">Products List</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Url Imagem</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of Products">
+        <th scope="row">{{ product.id }}</th>
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price }}</td>
+        <td><a href="{{ product.imgUrl }}">Link</a></td>
+        <td>
+          <button type="button" class="btn btn-sm btn-primary mx-1 my-1">
+            Edit
+          </button>
+          <button
+            type="button"
+            class="btn btn-sm btn-danger mx-1 my-1"
+            data-toggle="modal"
+            data-target="#deleteModal"
+          >
+            Delete
+          </button>
+          <!-- Start modal -->
+          <div
+            class="modal fade"
+            id="deleteModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="deleteModelLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="deleteModelLabel">Title</h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body text-danger">
+                  <p>Are you sure, you want to delete?</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    (click)="deleteProduct(product.id)"
+                    data-dismiss="modal"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End modal -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-success mx-auto" routerLink="/products/new">Adicionar</button>
 </div>

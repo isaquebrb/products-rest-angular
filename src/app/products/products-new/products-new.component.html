@@ -1,0 +1,15 @@
+<form #productsNewForm="ngForm">
+  <div class="form-group">
+    <label for="inputName">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="inputName"
+      placeholder="Enter Name"
+      [(ngModel)]="data.name"
+      name="name"
+      required
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>
