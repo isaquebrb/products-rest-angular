@@ -1,10 +1,22 @@
 # ProductsRestAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+This application was build to finish the Web Application Development discipline of ADSGE course at IFTM Udi Centro. It uses a fake rest API (json server on db.js file) simulating the [products-rest-api](https://github.com/isaquebrb/products-rest-api) to manage products, it's categories and orders. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Open the terminal, go to the project folder, run command:
+
+`npm install bootstrap jquery popper.js json-server --save`
+
+Start json server
+
+`json-server --watch db.json`
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+
+## Resources:
+
+Angular 8.2, Json Server, Bootstrap 4.4, JQuery 3.4, Popper.js 1.16.
 
 ## Code scaffolding
 
