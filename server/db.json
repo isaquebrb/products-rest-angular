@@ -4,14 +4,14 @@
       "id": 1,
       "name": "MacBook Pro",
       "description": "In mattis facilisis dolor, at sodales leo pulvinar eu.",
-      "price": 1250.0,
+      "price": 1250,
       "imgUrl": "https://www.google.com/search?q=macbook+pro"
     },
     {
       "id": 2,
       "name": "PC Gamer",
       "description": "Duis malesuada, mi sit amet sagittis ornare.",
-      "price": 1200.0,
+      "price": 1200,
       "imgUrl": "https://www.google.com/search?q=pc+gamer"
     },
     {
@@ -25,7 +25,7 @@
       "id": 4,
       "name": "Smart TV",
       "description": "Donec eleifend at lacus ut sagittis.",
-      "price": 2190.0,
+      "price": 2190,
       "imgUrl": "https://www.google.com/search?q=smart+tv"
     },
     {

@@ -27,12 +27,18 @@ export class ProductsService {
   getAll(): Observable<Products[]> {
     return this.http
       .get<Products[]>(this.apiUrl)
-      .pipe(retry(1), catchError(this.handleError("getProducts", [])));
+      .pipe(retry(1), catchError(this.handleError));
   }
 
   delete(id) {
     return this.http
       .delete<Products>(this.apiUrl + id, this.httpOptions)
-      .pipe(retry(1), catchError(this.handleError<Products>('deleteProduct id=${id}')));
+      .pipe(retry(1), catchError(this.handleError));
+  }
+
+  create(product): Observable<Products> {
+    return this.http
+      .post<Products>(this.apiUrl, JSON.stringify(product), this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
   }
 }
