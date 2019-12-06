@@ -10,7 +10,8 @@ Open the terminal, go to the project folder, run command:
 
 Start json server
 
-`json-server --watch db.json`
+`json-server --watch server/db.json` or
+`npx json-server --watch server/db.json` if you don't have json-server installed globally
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
