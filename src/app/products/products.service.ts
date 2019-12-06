@@ -26,7 +26,13 @@ export class ProductsService {
 
   getAll(): Observable<Products[]> {
     return this.http
-      .get<Products[]>(this.apiUrl)
+      .get<Products[]>(this.apiUrl, this.httpOptions)
+      .pipe(retry(1), catchError(this.handleError));
+  }
+
+  getOne(id): Observable<Products> {
+    return this.http
+      .get<Products>(this.apiUrl + "/" + id, this.httpOptions)
       .pipe(retry(1), catchError(this.handleError));
   }
 
@@ -39,6 +45,16 @@ export class ProductsService {
   create(product): Observable<Products> {
     return this.http
       .post<Products>(this.apiUrl, JSON.stringify(product), this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  update(id, product): Observable<Products> {
+    return this.http
+      .put<Products>(
+        this.apiUrl + id,
+        JSON.stringify(product),
+        this.httpOptions
+      )
       .pipe(retry(2), catchError(this.handleError));
   }
 }

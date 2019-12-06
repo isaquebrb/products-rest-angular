@@ -16,10 +16,10 @@
         <th scope="row">{{ product.id }}</th>
         <td>{{ product.name }}</td>
         <td>{{ product.description }}</td>
-        <td>{{ product.price }}</td>
+        <td>R$ {{ product.price }}</td>
         <td><a href="{{ product.imgUrl }}">Link</a></td>
         <td style="display: flex;">
-          <button type="button" class="btn btn-sm btn-primary mx-1 my-1">
+          <button type="button" class="btn btn-sm btn-primary mx-1 my-1" [routerLink]="['/products/edit', product.id]">
             Edit
           </button>
           <button

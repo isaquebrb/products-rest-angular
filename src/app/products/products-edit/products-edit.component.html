@@ -1,0 +1,80 @@
+<div style="max-width: 40rem;" class="mx-auto">
+    <h1 class="text-center">Edit Product</h1>
+    <form [formGroup]="editProductForm" (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="inputName">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputName"
+          placeholder="Enter Name"
+          formControlName="name"
+        />
+        <div
+          *ngIf="submitted && editProductForm.controls.name.hasError('required')"
+          class="alert alert-danger"
+        >
+          Required
+        </div>
+        <div
+          *ngIf="submitted && editProductForm.controls.name.hasError('maxlength')"
+          class="alert alert-danger"
+        >
+          Name must be between 0 and 50 caracters
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputDescription">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputDescription"
+          placeholder="Enter Description"
+          formControlName="description"
+        />
+      </div>
+      <div class="form-group">
+        <label for="inputPrice">Price</label>
+        <input
+          type="number"
+          class="form-control"
+          id="inputPrice"
+          placeholder="R$"
+          formControlName="price"
+        />
+        <div
+          *ngIf="submitted && editProductForm.controls.price.hasError('required')"
+          class="alert alert-danger"
+        >
+          Required
+        </div>
+        <div
+          *ngIf="submitted && editProductForm.controls.price.hasError('min')"
+          class="alert alert-danger"
+        >
+          Minimum price 0
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputImgUrl">Url Image</label>
+        <input
+          type="url"
+          class="form-control"
+          id="inputImgUrl"
+          formControlName="imgUrl"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary mx-1">Submit</button>
+      <button type="reset" class="btn btn-secondary mx-1" (click)="onReset()">
+        Reset
+      </button>
+      <button
+        type="button"
+        class="btn btn-danger mx-1"
+        (click)="onReset(); onCancel()"
+      >
+        Cancel
+      </button>
+    </form>
+  </div>
+  
