@@ -1,0 +1,45 @@
+<div style="max-width:30rem" class=" text-light mx-auto mt-5 py-5 px-5 bg-secondary rounded-lg">
+  <h1 class="text-center">Login</h1>
+  <form [formGroup]="formLogin" (ngSubmit)="signIn()">
+    <div class="form-group">
+      <label for="inputEmail">Email</label>
+      <input
+        id="inputEmail"
+        type="email"
+        class="form-control"
+        placeholder="sample@email.com"
+        formControlName="email"
+      />
+      <div
+        *ngIf="submitted && formLogin.controls.email.hasError('required')"
+        class="alert alert-danger"
+      >
+        Required
+      </div>
+      <div
+      *ngIf="formLogin.controls.email.hasError('email')"
+      class="alert alert-danger"
+    >
+      Invalid Email
+    </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword">Password</label>
+      <input
+        id="inputPassword"
+        type="password"
+        class="form-control"
+        formControlName="password"
+      />
+      <div
+        *ngIf="submitted && formLogin.controls.password.hasError('required')"
+        class="alert alert-danger"
+      >
+        Required
+      </div>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-success">Sign In</button>
+    </div>
+  </form>
+</div>

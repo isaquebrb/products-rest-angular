@@ -29,11 +29,11 @@
       "imgUrl": "https://www.google.com/search?q=smart+tv"
     },
     {
-      "id": 5,
-      "name": "The Lord of the Rings",
+      "name": "The Lord of the Rings 2",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 90.5,
-      "imgUrl": "https://www.google.com/search?q=the+lord+of+the+rings"
+      "imgUrl": "https://www.google.com/search?q=the+lord+of+the+rings",
+      "id": 5
     }
   ],
   "users": [

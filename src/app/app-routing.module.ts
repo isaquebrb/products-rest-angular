@@ -4,6 +4,7 @@ import { ProductsModule } from './products/products.module';
 import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
 import { ProductsNewComponent } from './products/products-new/products-new.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
@@ -17,8 +18,12 @@ const routes: Routes = [
   },
   {
     path: "",
-    redirectTo: "/home",
+    redirectTo: "/login",
     pathMatch: "full"
+  },
+  {
+    path: "login",
+    component: LoginComponent
   },
   {
     path: "users",
