@@ -1,9 +1,75 @@
-<div>
-  <form>
-    <div>
-      <label></label>
-      <input />
-      <div></div>
-    </div>
-  </form>
-</div>
+<div class="container mx-auto" style="max-width: 40rem;">
+        <h1 class="text-center">Create New User</h1>
+        <form [formGroup]="newUserForm" (ngSubmit)="submitForm()">
+          <div class="form-group">
+            <label for="inputName">Name</label>
+            <input
+              type="text"
+              id="inputName"
+              class="form-control"
+              formControlName="name"
+            />
+            <div
+              *ngIf="submitted && newUserForm.controls.name.hasError('required')"
+              class="alert alert-danger"
+            >
+              Required
+            </div>
+            <div
+              *ngIf="submitted && newUserForm.controls.name.hasError('maxlength')"
+              class="alert alert-danger"
+            >
+              Name must be between 0 and 50 caracters
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input
+              type="email"
+              id="inputEmail"
+              class="form-control"
+              formControlName="email"
+            />
+            <div
+              *ngIf="submitted && newUserForm.controls.email.hasError('required')"
+              class="alert alert-danger"
+            >
+              Required
+            </div>
+            <div
+              *ngIf="submitted && newUserForm.controls.email.hasError('email')"
+              class="alert alert-danger"
+            >
+              Invalid Email
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPhone">Phone</label>
+            <input
+              type="tel"
+              id="inputPhone"
+              class="form-control"
+              formControlName="phone"
+            />
+          </div>
+          <div class="form-group">
+            <label for="inputPass">Password</label>
+            <input
+              type="password"
+              id="inputPass"
+              class="form-control"
+              formControlName="password"
+            />
+            <div
+              *ngIf="submitted && newUserForm.controls.password.hasError('required')"
+              class="alert alert-danger"
+            >
+              Required
+            </div>
+          </div>
+          <button class="btn btn-primary mx-1">Submit</button>
+          <button class="btn btn-secondary mx-1">Reset</button>
+          <button class="btn btn-danger mx-1">Cancel</button>
+        </form>
+      </div>
+      

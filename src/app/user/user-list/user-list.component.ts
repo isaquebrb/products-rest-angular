@@ -31,7 +31,6 @@ export class UserListComponent implements OnInit {
   }
 
   deleteUser() {
-    console.log(this.selectedUser);
     this.userService.delete(this.selectedUser.id).subscribe(response => {
       this.loadUsers();
     });

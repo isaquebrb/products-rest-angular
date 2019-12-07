@@ -2,14 +2,11 @@ import { Component, OnInit } from "@angular/core";
 import {
   FormGroup,
   FormBuilder,
-  Validators,
-  ValidationErrors
+  Validators
 } from "@angular/forms";
 import { Location } from "@angular/common";
 import { ActivatedRoute, Router } from "@angular/router";
-import { Products } from "../products";
 import { ProductsService } from "../products.service";
-import { ThrowStmt } from "@angular/compiler";
 
 @Component({
   selector: "app-products-edit",

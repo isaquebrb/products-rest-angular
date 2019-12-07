@@ -51,5 +51,65 @@
       "phone": "977777777",
       "password": "123456"
     }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "moment": "2019-12-07T13:09:09Z",
+      "orderStatus": "WAITING_PAYMENT",
+      "clientId": 1,
+      "clientName": "Maria Brown",
+      "clientEmail": "maria@gmail.com",
+      "items": [
+        {
+          "quantity": 1,
+          "price": 1250,
+          "productId": 3,
+          "productName": "MacBook Pro",
+          "productImgUrl": ""
+        },
+        {
+          "quantity": 2,
+          "price": 90.5,
+          "productId": 1,
+          "productName": "The Lord of the Rings",
+          "productImgUrl": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "moment": "2019-07-21T03:42:10Z",
+      "orderStatus": "PAID",
+      "clientId": 2,
+      "clientName": "Alex Green",
+      "clientEmail": "alex@gmail.com",
+      "items": [
+        {
+          "quantity": 2,
+          "price": 1250,
+          "productId": 3,
+          "productName": "MacBook Pro",
+          "productImgUrl": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "moment": "2019-07-22T15:21:22Z",
+      "orderStatus": "SHIPPED",
+      "clientId": 1,
+      "clientName": "Maria Brown",
+      "clientEmail": "maria@gmail.com",
+      "items": [
+        {
+          "quantity": 2,
+          "price": 100.99,
+          "productId": 5,
+          "productName": "Rails for Dummies",
+          "productImgUrl": ""
+        }
+      ]
+    }
   ]
 }
