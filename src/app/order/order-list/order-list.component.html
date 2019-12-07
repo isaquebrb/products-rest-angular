@@ -1,0 +1,28 @@
+<div>
+  <h1 class="mt-2 mb-4 text-center">Orders List</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Client Name</th>
+        <th scope="col">Items</th>
+        <th scope="col">Moment</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of Orders">
+        <th scope="row">{{ order.id }}</th>
+        <td>{{ order.clientName }}</td>
+        <td>
+          <p *ngFor="let item of order.items">
+            {{ item.quantity }}x {{ item.productName }} (R$ {{ item.price }})
+          </p>
+        </td>
+
+        <td>{{ order.moment }}</td>
+        <td>{{ order.orderStatus }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

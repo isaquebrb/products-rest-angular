@@ -7,6 +7,7 @@ import {
 import { Location } from "@angular/common";
 import { ActivatedRoute, Router } from "@angular/router";
 import { ProductsService } from "../products.service";
+import { Products } from '../products';
 
 @Component({
   selector: "app-products-edit",
